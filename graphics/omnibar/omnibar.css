@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+#omnibar {
+    position: relative;
+    width: 1920px;
+    height: 70px;
+    color: #000000;
+    font-weight: bolder;
+    font-family: 'Raleway', sans-serif;
+}
+
+#omnibar #donate-url {
+    position: absolute;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 48px;
+}
+
+#omnibar #total {
+    position: absolute;
+    right: 0;
+    text-align: right;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 48px;
+}

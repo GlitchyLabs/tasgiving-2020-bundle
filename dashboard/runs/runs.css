@@ -1,0 +1,37 @@
+label {
+    position: relative;
+    top: 0px;
+    font-weight: bold;
+}
+#schedule .run {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4px;
+    border: 1pt solid white;
+    border-radius: 10px;
+    margin: 4px 0;
+    padding: 10px;
+}
+#schedule .run:nth-child(even) {
+    background: rgb(82, 95, 120);
+}
+
+#currentRun .run {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4px;
+    border: 1pt solid white;
+    border-radius: 10px;
+    margin: 4px 0;
+    padding: 10px;
+}
+
+#nextRun .run {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4px;
+    border: 1pt solid white;
+    border-radius: 10px;
+    margin: 4px 0;
+    padding: 10px;
+}
