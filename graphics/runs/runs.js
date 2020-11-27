@@ -88,9 +88,11 @@ function setup() {
         runnerElement = document.createElement('div');
         runnerElement.innerText = run.runners[0].name;
         runRunners.appendChild(runnerElement);
-        runnerElement = document.createElement('div');
-        runnerElement.innerText = run.runners[0].name;
-        runRunners.appendChild(runnerElement);
+        if (run.runners[1]) {
+            runnerElement = document.createElement('div');
+            runnerElement.innerText = run.runners[1].name;
+            runRunners.appendChild(runnerElement);
+        }
 
         runElement = document.createElement('div');
         runElement.id = `run-${run.id}`;

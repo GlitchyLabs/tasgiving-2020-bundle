@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
 
 #currentRun .run * {
-    color: #FFFFFF;
+    color: #0453a0;
     position: absolute;
     font-weight: bolder;
     font-family: 'Raleway', sans-serif;
@@ -24,7 +24,7 @@
     text-align: center;
     top: 0px;
     left: 75%;
-    font-size: 56px;
+    font-size: 48px;
 }
 
 #currentRun .run .run-console {
@@ -40,7 +40,7 @@
 
 #currentRun .run .run-release-year {
     top: 130px;
-    left: 870px;
+    left: 1020px;
     font-size: 36px;
 }
 
