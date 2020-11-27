@@ -233,22 +233,22 @@ function setup() {
         runElement.appendChild(runRunnersLabel);
         runElement.appendChild(runRunners);
         runsElement.appendChild(runElement);
+
+        runNextButton = document.createElement('input');
+        runNextButton.type = "button";
+        runNextButton.value = "Previous Run";
+        runNextButton.onclick = previous;
+        runsElement.appendChild(runNextButton);
+        runBackButton = document.createElement('input');
+        runBackButton.type = "button";
+        runBackButton.value = "Next Run";
+        runBackButton.onclick = next;
+        runsElement.appendChild(runBackButton);
     });
     function next() {
-        this._pendingNextRunMessageResponse = true;
-        this._checkButtons();
-        nodecg.sendMessage('nextRun', () => {
-            this._pendingNextRunMessageResponse = false;
-            this._checkButtons();
-        });
+        nodecg.sendMessage('nextRun', () => {});
     }
     function previous() {
-        this._pendingPreviousRunMessageResponse = true;
-        this._checkButtons();
-        nodecg.sendMessage('previousRun', () => {
-            this._pendingPreviousRunMessageResponse = false;
-            this._checkButtons();
-        });
+        nodecg.sendMessage('previousRun', () => {});
     }
-
 }

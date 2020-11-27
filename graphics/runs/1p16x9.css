@@ -19,9 +19,11 @@
 }
 
 #currentRun .run .run-title {
+    width: 100%;
+    text-align: center;
     top: 0px;
     left: 75%;
-    font-size: 64px;
+    font-size: 56px;
 }
 
 #currentRun .run .run-console {

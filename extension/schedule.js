@@ -26,6 +26,7 @@ const POLL_INTERVAL = 5 * 1000;
 let updateInterval;
 nodecg.log.trace('schedule init');
 update();
+canSeekScheduleRep.value = true;
 // Get latest schedule data every POLL_INTERVAL milliseconds
 updateInterval = setInterval(update, POLL_INTERVAL);
 // Dashboard can invoke manual updates
@@ -306,8 +307,8 @@ function _seekToPreviousRun() {
     });
     nextRunRep.value = clone(currentRunRep.value);
     currentRunRep.value = (prevRun && prevRun.type === 'run') ? clone(prevRun) : null;
-    checklist.reset();
-    timer.reset();
+    // checklist.reset();
+    // timer.reset();
 }
 /**
  * Seeks to the next run in the schedule, updating currentRun and nextRun accordingly.
@@ -321,8 +322,8 @@ function _seekToNextRun() {
     const newNextRun = _findRunAfter(nextRunRep.value);
     currentRunRep.value = clone(nextRunRep.value);
     nextRunRep.value = clone(newNextRun);
-    checklist.reset();
-    timer.reset();
+    // checklist.reset();
+    // timer.reset();
 }
 /**
  * Finds the first run that comes after a given run.

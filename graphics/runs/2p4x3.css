@@ -24,8 +24,10 @@
 }
 
 #currentRun2p .run .run-title {
+    width: 100%;
+    text-align: center;
     top: 180px;
-    font-size: 64px;
+    font-size: 56px;
 }
 
 #currentRun2p .run .run-console {
