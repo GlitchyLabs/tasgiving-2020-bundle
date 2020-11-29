@@ -84,6 +84,16 @@
 				"file": "runs/2p16x9.html",
 				"width": 1884,
 				"height": 386
+			},
+			{
+				"file": "runs/drums.html",
+				"width": 1884,
+				"height": 386
+			},
+			{
+				"file": "tech/run.html",
+				"width": 1920,
+				"height": 1080
 			}
 		]
 	},
