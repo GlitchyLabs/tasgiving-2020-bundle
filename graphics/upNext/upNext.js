@@ -12,8 +12,6 @@ function setup() {
         const end = start + 5;
 
         runs.slice(start, end).forEach((run, index) => {
-            console.log(index, run);
-
             runElement = document.createElement('div');
             runElement.id = `run-${index}`;
             runElement.classList.add('run');

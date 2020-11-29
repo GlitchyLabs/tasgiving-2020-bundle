@@ -94,6 +94,11 @@
 				"file": "tech/run.html",
 				"width": 1920,
 				"height": 1080
+			},
+			{
+				"file": "tech/host.html",
+				"width": 1920,
+				"height": 1080
 			}
 		]
 	},

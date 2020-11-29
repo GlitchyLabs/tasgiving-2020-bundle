@@ -1,0 +1,119 @@
+label {
+    position: relative;
+    top: 0px;
+    font-weight: bold;
+}
+
+body {
+    background-color: #2F3A4F;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+#banner {
+    background-color: #0453a0;
+    border-bottom: 2px solid #02376b;
+    text-align: center;
+    padding: 10px;
+}
+
+#hostGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+#currentRun {
+    margin-bottom: 10px;
+}
+
+#currentRun h1 {
+    background: rgb(82, 95, 120);
+    border-radius: 10px 10px 0px 0px;
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+}
+
+#currentRun .run {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4px;
+    border: 1pt solid rgb(82, 95, 120);;
+    border-top: none;
+    border-radius: 0px 0px 10px 10px;
+    margin: 0;
+    padding: 10px;
+}
+#currentRun input {
+    background: rgb(82, 95, 120);
+    color: #FFFFFF;
+    border: 1pt solid #FFFFFF !important;
+    margin: 5px;
+}
+#currentRun input:disabled {
+    background: #666666;
+    color: #222222 !important;
+    border: 1pt solid #222222 !important;
+    border-color: #222222 !important;
+}
+
+#nextRun {
+    margin-bottom: 10px;
+}
+
+#nextRun h1 {
+    background: rgb(82, 95, 120);
+    border-radius: 10px 10px 0px 0px;
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+}
+
+#nextRun .run {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4px;
+    border: 1pt solid rgb(82, 95, 120);;
+    border-top: none;
+    border-radius: 0px 0px 10px 10px;
+    margin: 0;
+    padding: 10px;
+}
+
+
+#schedule {
+    margin-bottom: 10px;
+}
+
+#schedule h1 {
+    background: rgb(82, 95, 120);
+    border-radius: 10px 10px 0px 0px;
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+}
+
+#schedule .run {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4px;
+    border: 1pt solid rgb(82, 95, 120);
+    border-top: none;
+    margin: 0;
+    padding: 10px;
+}
+
+#schedule .run:nth-child(even) {
+    background: rgb(82, 95, 120);
+}
+
+#schedule .run:last-child {
+    border-radius: 0px 0px 10px 10px;
+}
+
+#donations {
+    font-size: 40px;
+}
