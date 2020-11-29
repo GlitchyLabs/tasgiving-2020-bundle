@@ -1,3 +1,5 @@
+const currentRun = nodecg.Replicant('currentRun');
+const nextRun = nodecg.Replicant('nextRun');
 const timeClock = nodecg.Replicant('timeClock');
 
 Number.prototype.pad = function(n) {
@@ -18,6 +20,177 @@ let pauseButton = undefined;
 let resetButton = undefined;
 
 function setup() {
+    // canSeekSchedule.on('change', () => {
+    //     this._checkButtons();
+    // });
+    currentRun.on('change', run => {
+        if (!run) {
+            return;
+        }
+
+        const runsElement = document.getElementById('currentRun');
+        runsElement.innerHTML = '';
+
+        runTitleLabel = document.createElement('label');
+        runTitleLabel.htmlFor = `run-${run.id}-title`;
+        runTitleLabel.innerText = 'Title:';
+        runTitle = document.createElement('div');
+        runTitle.id = `run-${run.id}-title`;
+        runTitle.classList.add('run-title');
+        runTitle.innerText = run.name;
+
+        runConsoleLabel = document.createElement('label');
+        runConsoleLabel.htmlFor = `run-${run.id}-console`;
+        runConsoleLabel.innerText = 'Console:';
+        runConsole = document.createElement('div');
+        runConsole.id = `run-${run.id}-console`;
+        runConsole.classList.add('run-console');
+        runConsole.innerText = run.console;
+
+        runCategoryLabel = document.createElement('label');
+        runCategoryLabel.htmlFor = `run-${run.id}-category`;
+        runCategoryLabel.innerText = 'Category:';
+        runCategory = document.createElement('div');
+        runCategory.id = `run-${run.id}-category`;
+        runCategory.classList.add('run-category');
+        runCategory.innerText = run.category;
+
+        runSetupLabel = document.createElement('label');
+        runSetupLabel.htmlFor = `run-${run.id}-setup`;
+        runSetupLabel.innerText = 'Setup:';
+        runSetup = document.createElement('div');
+        runSetup.id = `run-${run.id}-setup`;
+        runSetup.classList.add('run-setup');
+        runSetup.innerText = run.Setup;
+
+        runEstimateLabel = document.createElement('label');
+        runEstimateLabel.htmlFor = `run-${run.id}-estimate`;
+        runEstimateLabel.innerText = 'Estimate:';
+        runEstimate = document.createElement('div');
+        runEstimate.id = `run-${run.id}-estimate`;
+        runEstimate.classList.add('run-estimate');
+        runEstimate.innerText = run.estimate;
+
+        runRunnersLabel = document.createElement('label');
+        runRunnersLabel.htmlFor = `run-${run.id}-runners`;
+        runRunnersLabel.innerText = 'Runners:';
+        runRunners = document.createElement('div');
+        runRunners.id = `run-${run.id}-runners`;
+        runRunners.classList.add('run-runners');
+        run.runners.forEach((runner) => {
+            runnerElement = document.createElement('span');
+            runnerElement.innerText = runner.name + '\n';
+            runRunners.appendChild(runnerElement);
+        });
+
+        runElement = document.createElement('div');
+        runElement.id = `run-${run.id}`;
+        runElement.classList.add('run');
+        runElement.appendChild(runTitleLabel);
+        runElement.appendChild(runTitle);
+        runElement.appendChild(runConsoleLabel);
+        runElement.appendChild(runConsole);
+        runElement.appendChild(runCategoryLabel);
+        runElement.appendChild(runCategory);
+        runElement.appendChild(runSetupLabel);
+        runElement.appendChild(runSetup);
+        runElement.appendChild(runEstimateLabel);
+        runElement.appendChild(runEstimate);
+        runElement.appendChild(runRunnersLabel);
+        runElement.appendChild(runRunners);
+        runsElement.innerHTML = "<h1>Current</h1>";
+        runsElement.appendChild(runElement);
+
+        runNextButton = document.createElement('input');
+        runNextButton.type = "button";
+        runNextButton.value = "Previous Run";
+        runNextButton.onclick = previous;
+        runsElement.appendChild(runNextButton);
+        runBackButton = document.createElement('input');
+        runBackButton.type = "button";
+        runBackButton.value = "Next Run";
+        runBackButton.onclick = next;
+        runsElement.appendChild(runBackButton);
+    });
+    nextRun.on('change', run => {
+        if (!run) {
+            return;
+        }
+
+        const runsElement = document.getElementById('nextRun');
+        runsElement.innerHTML = '';
+
+        runTitleLabel = document.createElement('label');
+        runTitleLabel.htmlFor = `run-${run.id}-title`;
+        runTitleLabel.innerText = 'Title:';
+        runTitle = document.createElement('div');
+        runTitle.id = `run-${run.id}-title`;
+        runTitle.classList.add('run-title');
+        runTitle.innerText = run.name;
+
+        runConsoleLabel = document.createElement('label');
+        runConsoleLabel.htmlFor = `run-${run.id}-console`;
+        runConsoleLabel.innerText = 'Console:';
+        runConsole = document.createElement('div');
+        runConsole.id = `run-${run.id}-console`;
+        runConsole.classList.add('run-console');
+        runConsole.innerText = run.console;
+
+        runCategoryLabel = document.createElement('label');
+        runCategoryLabel.htmlFor = `run-${run.id}-category`;
+        runCategoryLabel.innerText = 'Category:';
+        runCategory = document.createElement('div');
+        runCategory.id = `run-${run.id}-category`;
+        runCategory.classList.add('run-category');
+        runCategory.innerText = run.category;
+
+        runSetupLabel = document.createElement('label');
+        runSetupLabel.htmlFor = `run-${run.id}-setup`;
+        runSetupLabel.innerText = 'Setup:';
+        runSetup = document.createElement('div');
+        runSetup.id = `run-${run.id}-setup`;
+        runSetup.classList.add('run-setup');
+        runSetup.innerText = run.Setup;
+
+        runEstimateLabel = document.createElement('label');
+        runEstimateLabel.htmlFor = `run-${run.id}-estimate`;
+        runEstimateLabel.innerText = 'Estimate:';
+        runEstimate = document.createElement('div');
+        runEstimate.id = `run-${run.id}-estimate`;
+        runEstimate.classList.add('run-estimate');
+        runEstimate.innerText = run.estimate;
+
+        runRunnersLabel = document.createElement('label');
+        runRunnersLabel.htmlFor = `run-${run.id}-runners`;
+        runRunnersLabel.innerText = 'Runners:';
+        runRunners = document.createElement('div');
+        runRunners.id = `run-${run.id}-runners`;
+        runRunners.classList.add('run-runners');
+        run.runners.forEach((runner) => {
+            runnerElement = document.createElement('span');
+            runnerElement.innerText = runner.name + '\n';
+            runRunners.appendChild(runnerElement);
+        });
+
+        runElement = document.createElement('div');
+        runElement.id = `run-${run.id}`;
+        runElement.classList.add('run');
+        runElement.appendChild(runTitleLabel);
+        runElement.appendChild(runTitle);
+        runElement.appendChild(runConsoleLabel);
+        runElement.appendChild(runConsole);
+        runElement.appendChild(runCategoryLabel);
+        runElement.appendChild(runCategory);
+        runElement.appendChild(runSetupLabel);
+        runElement.appendChild(runSetup);
+        runElement.appendChild(runEstimateLabel);
+        runElement.appendChild(runEstimate);
+        runElement.appendChild(runRunnersLabel);
+        runElement.appendChild(runRunners);
+        runsElement.innerHTML = "<h1>Next</h1>";
+        runsElement.appendChild(runElement);
+    });
+    
     timedateElement = document.getElementById('timedate');
     startButton = document.getElementById('startButton');
     pauseButton = document.getElementById('pauseButton');
@@ -74,7 +247,15 @@ function setup() {
             }
         }
     })
+
+    function next() {
+        nodecg.sendMessage('nextRun', () => {});
+    }
+    function previous() {
+        nodecg.sendMessage('previousRun', () => {});
+    }
 }
+
 
 function startClock() {
     var data = {

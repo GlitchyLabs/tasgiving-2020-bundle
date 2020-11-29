@@ -2,21 +2,26 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./run.css">
 	<link rel="stylesheet" href="./timeClock.css">
 	<script src="../../shared/p5.js"></script>
     <script src="../../shared/p5.dom.js"></script>
-    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-	<script src="./timeClock.js"></script>
+	<script src="./run.js"></script>
 </head>
-<body id="timeClock">
-    <div id="timedate">
-        <a id="h">99</a>:
-        <a id="m">99</a>:
-        <a id="s">99</a>:
-        <a id="mi">999</a>
+<body>
+    <div id="currentRun"></div>
+    <div id="nextRun"></div>
+    <div id="timeClock">
+        <div id="timedate">
+            <a id="h">99</a>:
+            <a id="m">99</a>:
+            <a id="s">99</a>:
+            <a id="mi">999</a>
+        </div>
+        <input id="startButton" type="button" onClick="startClock()" value="Start">
+        <input id="pauseButton" type="button" onClick="pauseClock()" value="Pause">
+        <input id="resetButton" type="button" onClick="resetClock()" value="Reset">
     </div>
-    <input id="startButton" type="button" onClick="startClock()" value="Start">
-    <input id="pauseButton" type="button" onClick="pauseClock()" value="Pause">
-    <input id="resetButton" type="button" onClick="resetClock()" value="Reset">
 </body>
+
 </html>
