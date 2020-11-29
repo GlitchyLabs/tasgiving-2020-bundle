@@ -1,12 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
 
+#timer {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 65px;
+    left: 110px;
+    font-size: 48px;
+}
+
+#timer *,
 #currentRun .run * {
     color: #0453a0;
-    position: absolute;
-    left: 50%;
     font-weight: bolder;
     font-family: 'Raleway', sans-serif;
     -webkit-text-stroke: 1px #6e6e6e;
+}
+
+#currentRun .run * {
+    position: absolute;
+    left: 50%;
 }
 
 #currentRun .run * div {
@@ -49,7 +62,7 @@
 }
 
 #currentRun .run .run-category {
-    top: 250px;
+    top: 285px;
     font-size: 32px;
 }
 

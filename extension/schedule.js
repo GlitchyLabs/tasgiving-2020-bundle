@@ -182,7 +182,6 @@ nodecg.listenFor('resetRun', (pk, cb) => {
  * @returns A a promise resolved with "true" if the schedule was updated, "false" if unchanged.
  */
 async function update() {
-    nodecg.log.info('Update for schedule triggered');
     nodecg.log.trace(JSON.stringify(trackerURLS, undefined, 2));
     const runnersPromise = request({
         uri: trackerURLS.runners,

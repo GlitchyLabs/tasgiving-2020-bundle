@@ -1,0 +1,37 @@
+.p5Canvas {
+    display: none;
+}
+
+#timedate {
+    font: small-caps lighter 43px/150% "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    text-align:left;
+    width: 100%;
+    margin: 40px auto;
+    color:#FFFFFF;
+    border-left: 3px solid #666666;
+    padding: 20px;
+}
+
+#timedate.stopped {
+    border-left: 3px solid #ed1f24;
+}
+#timedate.paused {
+    border-left: 3px solid #ebba34;
+}
+#timedate.running {
+    border-left: 3px solid #7ee600;
+}
+
+#timeClock input {
+    background: rgb(82, 95, 120);
+    color: #FFFFFF;
+    border: 1pt solid #FFFFFF !important;
+    margin: 5px;
+}
+
+#timeClock input:disabled {
+    background: #666666;
+    color: #222222 !important;
+    border: 1pt solid #222222 !important;
+    border-color: #222222 !important;
+}

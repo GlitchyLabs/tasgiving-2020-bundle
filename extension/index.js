@@ -43,6 +43,7 @@ async function init() {
         });
     }
     require('./total');
+    require('./timeClock');
 }
 
 // Fetch the login page, and run the response body through cheerio

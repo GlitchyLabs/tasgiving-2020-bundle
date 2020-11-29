@@ -19,7 +19,7 @@
 				"width": 3,
 				"file": "runs/schedule.html",
 				"headerColor": "#525F78",
-				"workspace": "runs"
+				"workspace": "Runs"
 			},
 			{
 				"name": "runs-current",
@@ -27,7 +27,7 @@
 				"width": 3,
 				"file": "runs/current.html",
 				"headerColor": "#525F78",
-				"workspace": "runs"
+				"workspace": "Runs"
 			},
 			{
 				"name": "runs-next",
@@ -35,7 +35,15 @@
 				"width": 3,
 				"file": "runs/next.html",
 				"headerColor": "#525F78",
-				"workspace": "runs"
+				"workspace": "Runs"
+			},
+			{
+				"name": "timeClock",
+				"title": "Time Clock",
+				"width": 3,
+				"file": "timeClock/timeClock.html",
+				"headerColor": "#525F78",
+				"workspace": "Runs"
 			},
 			{
 				"name": "omnibar",
@@ -43,7 +51,7 @@
 				"width": 3,
 				"file": "omnibar/omnibar.html",
 				"headerColor": "#525F78",
-				"workspace": "p5.js"
+				"workspace": "Event"
 			}
 		],
 		"graphics": [
