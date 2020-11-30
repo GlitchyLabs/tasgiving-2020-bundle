@@ -14,6 +14,7 @@ const total = nodecg.Replicant('total');
 let disconnectWarningTimeout;
 updateTotal();
 setInterval(updateTotal, 500);
+total.value = {};
 autoUpdateTotal.value = true;
 autoUpdateTotal.on('change', (newVal) => {
     if (newVal) {

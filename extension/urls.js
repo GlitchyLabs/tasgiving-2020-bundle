@@ -25,7 +25,7 @@ const PRODUCTION_URLS = {
     interviews: trackerUrlFactory(`/gdq/interviews/${EVENT_ID}/`),
     runners: trackerUrlFactory(`/search?type=runner&event=${EVENT_ID}`),
     runs: trackerUrlFactory(`/search?type=run&event=${EVENT_ID}`),
-    total: trackerUrlFactory(`/event/TASGiving2020?json`),
+    total: trackerUrlFactory(`/event/${EVENT_ID}?json`),
     login: trackerUrlFactory('/../admin/login/')
 };
 function trackerUrlFactory(route) {
